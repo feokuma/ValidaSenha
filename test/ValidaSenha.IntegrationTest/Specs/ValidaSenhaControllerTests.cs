@@ -27,11 +27,7 @@ namespace ValidaSenha.IntegrationTest
             httpClient = testServer.CreateClient();
         }
 
-
-
-
         [Test]
-        //public async Task PostDeveRetornarBadRequestCasoInputN?oExistaNoObjetoEnviado()
         public async Task PostDeveRetornarBadRequestCasoInputNaoExistaNoObjetoEnviado()
         {
             var objetoComParametroInvalido = JsonSerializer.Serialize(new { parametroErrado = "AbTp9!foo" });
@@ -68,7 +64,6 @@ namespace ValidaSenha.IntegrationTest
         [TestCase("99999999!", false)]
         [TestCase("AbTp9!foo", true)]
         [TestCase("F3rn@ndo12", true)]
-        //public async Task PostDeveRetornarObjetoComPar?metroOutputBooleanoDeAcordoComEsperado(string senha, bool resultadoEsperado)
         public async Task PostDeveRetornarObjetoComParametroOutputBooleanoDeAcordoComEsperado(string senha, bool resultadoEsperado)
         {
             var senhaParaValidacao = JsonSerializer.Serialize(new { input = senha });
