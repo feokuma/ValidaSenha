@@ -95,7 +95,7 @@ Com a API em execução, em um browser, acesse [https://localhost:5001](https://
 Utilizando o Postman, que é meu favorito, siga os seguintes passos para enviar o teste:
 1) Vá em **Preferences**, na guia **General** e desabilite a opção **SSL Certificate verification**. Isso é necessário pois não estamos utilizando um certificado e o postman não fará a requisição se estiver levando isso em conta.
 2) Na área principal crie uma nova aba e no método onde está **GET**, altere para **POST**
-3) No campo para URL insira [https://localhost:5001](https://localhost:5001/)
+3) No campo para URL insira **https://localhost:5001/api/validasenha**
 4) Nas guias abaixo selecione **Body** e nas opções que aparecerão abaixo selecione **raw**. No combo no final desta linha de opções onde está **Text** altere para **JSON**
 5) No campo de seguinte insira a estrutura com a string que deseja testar
 ```
