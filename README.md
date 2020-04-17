@@ -21,7 +21,13 @@ IsValid("AbTp9!foo") -> true
 ## Pré-requisitos
 
 - Dotnet core 3.1
+
+## Ferramentas
+
 - Visual Studio / Visual Studio for Mac / Rider
+- Postman / Insomnia
+- Terminal
+- Git
 
 ## Executando o projeto
 
