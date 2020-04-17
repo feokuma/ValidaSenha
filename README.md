@@ -84,15 +84,15 @@ info: Microsoft.Hosting.Lifetime[0]
 info: Microsoft.Hosting.Lifetime[0]
 ```
 
-**Consultando documentação da API(Swagger)**
+### Consultando documentação da API(Swagger)
 
-Com a API em execução, em um browser, acesse a [https://localhost:5001](https://localhost:5001/)
+Com a API em execução, em um browser, acesse [https://localhost:5001](https://localhost:5001/) para entra na página do Swagger onde será possivel ver informações sobre os endpoints, que neste caso é apenas um, e até fazer testes.
 
-**Enviando um string para teste
+### Enviando uma string para teste
 
 É possível enviar uma string para a validação dos critérios da senha através do próprio swagger, ou utilizando alguma ferramenta REST Client como [Postman](https://www.postman.com/) ou o [Insomnia](https://insomnia.rest/). 
 
-Utilizando o Postman siga os seguintes passos para enviar o teste:
+Utilizando o Postman, que é meu favorito, siga os seguintes passos para enviar o teste:
 1) Vá em **Preferences**, na guia **General** e desabilite a opção **SSL Certificate verification**. Isso é necessário pois não estamos utilizando um certificado e o postman não fará a requisição se estiver levando isso em conta.
 2) Na área principal crie uma nova aba e no método onde está **GET**, altere para **POST**
 3) No campo para URL insira [https://localhost:5001](https://localhost:5001/)
