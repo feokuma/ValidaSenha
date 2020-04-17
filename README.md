@@ -1,6 +1,6 @@
 # ValidaSenha
 
-Esta é uma simples API para validação de senha que simplesmente responde se a string recebida atende aos critérios para considerá-la válida. 
+Esta é uma simples API para validação de senha que responde se a string recebida atende aos critérios para considerá-la válida. 
 
 ### Regras
 - Nove ou mais caracteres
