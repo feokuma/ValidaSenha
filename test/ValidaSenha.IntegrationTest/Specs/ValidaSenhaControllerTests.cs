@@ -27,13 +27,17 @@ namespace ValidaSenha.IntegrationTest
             httpClient = testServer.CreateClient();
         }
 
+
+
+
         [Test]
-        public async Task PostDeveRetornarBadRequestCasoInputNãoExistaNoObjetoEnviado()
+        //public async Task PostDeveRetornarBadRequestCasoInputN?oExistaNoObjetoEnviado()
+        public async Task PostDeveRetornarBadRequestCasoInputNaoExistaNoObjetoEnviado()
         {
-            var objetoComParâmetroInválido = JsonSerializer.Serialize(new { parametroErrado = "AbTp9!foo" });
+            var objetoComParametroInvalido = JsonSerializer.Serialize(new { parametroErrado = "AbTp9!foo" });
             var post = new HttpRequestMessage(HttpMethod.Post, "api/validasenha")
             {
-                Content = new StringContent(objetoComParâmetroInválido, Encoding.UTF8, "application/json")
+                Content = new StringContent(objetoComParametroInvalido, Encoding.UTF8, "application/json")
             };
 
             var retorno = await httpClient.SendAsync(post);
@@ -44,10 +48,10 @@ namespace ValidaSenha.IntegrationTest
         [Test]
         public async Task PostDeveRetornarBadRequestCasoInputSejaVazio()
         {
-            var objetoComParâmetroInválido = JsonSerializer.Serialize(new { input = "" });
+            var objetoComParametroInvalido = JsonSerializer.Serialize(new { input = "" });
             var post = new HttpRequestMessage(HttpMethod.Post, "api/validasenha")
             {
-                Content = new StringContent(objetoComParâmetroInválido, Encoding.UTF8, "application/json")
+                Content = new StringContent(objetoComParametroInvalido, Encoding.UTF8, "application/json")
             };
 
             var retorno = await httpClient.SendAsync(post);
@@ -64,12 +68,13 @@ namespace ValidaSenha.IntegrationTest
         [TestCase("99999999!", false)]
         [TestCase("AbTp9!foo", true)]
         [TestCase("F3rn@ndo12", true)]
-        public async Task PostDeveRetornarObjetoComParâmetroOutputBooleano(string senha, bool resultadoEsperado)
+        //public async Task PostDeveRetornarObjetoComPar?metroOutputBooleanoDeAcordoComEsperado(string senha, bool resultadoEsperado)
+        public async Task PostDeveRetornarObjetoComParametroOutputBooleanoDeAcordoComEsperado(string senha, bool resultadoEsperado)
         {
-            var senhaParaValidação = JsonSerializer.Serialize(new { input = senha });
+            var senhaParaValidacao = JsonSerializer.Serialize(new { input = senha });
             var post = new HttpRequestMessage(HttpMethod.Post, "api/validasenha")
             {
-                Content = new StringContent(senhaParaValidação, Encoding.UTF8,"application/json")
+                Content = new StringContent(senhaParaValidacao, Encoding.UTF8,"application/json")
             };
             var retornoEsperado = JsonSerializer.Serialize(new { output = resultadoEsperado});
 
