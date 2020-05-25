@@ -2,7 +2,7 @@
 
 Esta é uma simples API para validação de senha que responde se a string recebida atende aos critérios para considerá-la válida. 
 
-![](https://github.com/feokuma/ValidaSenha/.github/workflows/dotnet-core.yml/badge.svg)
+![](https://github.com/feokuma/ValidaSenha/workflows/Build%20Solution/badge.svg)
 
 ### Regras
 - Nove ou mais caracteres
